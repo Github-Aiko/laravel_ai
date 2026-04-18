@@ -1,15 +1,17 @@
 {
-    "name": "laravel/ai",
-    "description": "The official AI SDK for Laravel.",
+    "name": "github-aiko/laravel-ai",
+    "description": "Fork of the Laravel AI SDK with additional providers (including vLLM).",
     "license": "MIT",
     "keywords": [
         "laravel",
-        "ai"
+        "ai",
+        "vllm",
+        "llm"
     ],
-    "homepage": "https://github.com/laravel/ai",
+    "homepage": "https://github.com/Github-Aiko/laravel_ai",
     "support": {
-        "issues": "https://github.com/laravel/ai/issues",
-        "source": "https://github.com/laravel/ai"
+        "issues": "https://github.com/Github-Aiko/laravel_ai/issues",
+        "source": "https://github.com/Github-Aiko/laravel_ai"
     },
     "require": {
         "php": "^8.3",
