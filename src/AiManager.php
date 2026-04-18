@@ -31,6 +31,7 @@ use Laravel\Ai\Providers\OllamaProvider;
 use Laravel\Ai\Providers\OpenAiProvider;
 use Laravel\Ai\Providers\OpenRouterProvider;
 use Laravel\Ai\Providers\Provider;
+use Laravel\Ai\Providers\VllmProvider;
 use Laravel\Ai\Providers\VoyageAiProvider;
 use Laravel\Ai\Providers\XaiProvider;
 use LogicException;
@@ -407,6 +408,17 @@ class AiManager extends MultipleInstanceManager
     public function createOpenrouterDriver(array $config): OpenRouterProvider
     {
         return new OpenRouterProvider(
+            $config,
+            $this->app->make(Dispatcher::class)
+        );
+    }
+
+    /**
+     * Create a vLLM powered instance.
+     */
+    public function createVllmDriver(array $config): VllmProvider
+    {
+        return new VllmProvider(
             $config,
             $this->app->make(Dispatcher::class)
         );

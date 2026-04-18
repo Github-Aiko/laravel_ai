@@ -121,6 +121,12 @@ return [
             'url' => env('OPENROUTER_URL', 'https://openrouter.ai/api/v1'),
         ],
 
+        'vllm' => [
+            'driver' => 'vllm',
+            'key' => env('VLLM_API_KEY', ''),
+            'url' => env('VLLM_URL', 'http://localhost:8000/v1'),
+        ],
+
         'voyageai' => [
             'driver' => 'voyageai',
             'key' => env('VOYAGEAI_API_KEY'),
